@@ -249,4 +249,55 @@ The API returns the conversion result, which is then sent back to the user throu
 
 ---
 
+# 📱 Telegram Integration
+
+The chatbot is also integrated with **Telegram**.
+
+This allows users to interact with the Currency Converter Chatbot through Telegram instead of only using the Dialogflow interface.
+
+Example:
+
+```text
+User:
+Convert 50 CAD to AUD
+
+Bot:
+50.0 CAD is 50.23 AUD
+```
+
+The Telegram integration demonstrates how the chatbot can be connected to an external messaging platform.
+
+---
+
+# 🌍 ngrok Integration
+
+During local development, **ngrok** is used to expose the Flask server to the internet.
+
+Since the Flask application runs locally, Dialogflow cannot directly access:
+
+```text
+http://127.0.0.1:5000
+```
+
+ngrok creates a temporary public URL that forwards requests to the local Flask server.
+
+Architecture:
+
+```text
+Dialogflow
+     │
+     ▼
+ Public ngrok URL
+     │
+     ▼
+Local Flask Server
+     │
+     ▼
+ExchangeRate-API
+```
+
+This allows Dialogflow to communicate with the locally running Flask webhook during development and testing.
+
+---
+
 
