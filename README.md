@@ -27,5 +27,90 @@ A demonstration of the same chatbot integrated with **Telegram**, showing curren
 
 **Bot Username:** `@Akash_karki_bot`
 
+---
+
+##  Features
+
+### 💱 Currency Conversion
+
+Users can convert different currencies using natural language.
+
+Examples:
+
+```text
+Convert 100 USD to NPR
+Convert 50 CAD to AUD
+Convert 1000 INR to NPR
+How much is 20 USD in EUR?
+Convert 500 Nepalese rupees to Indian rupees
+```
+
+The chatbot identifies the:
+
+* Amount
+* Source currency
+* Target currency
+
+and returns the converted amount using the ExchangeRate-API.
+
+### Conversational Features
+
+The chatbot can also respond to common conversations, including:
+
+* Greetings
+* Help
+* Thank you
+* Well done / appreciation
+* Who are you?
+* Who made you?
+* Who is your boss?
+* Can you get smarter?
+* you're beautiful. I love you.
+* Goodbye
+* Other common conversational messages
+
+This makes the chatbot more interactive instead of functioning only as a currency conversion tool.
+
+---
+
+# Dialogflow Integration
+
+**Dialogflow** is used as the Natural Language Processing (NLP) layer of the chatbot.
+
+It understands the user's message and determines what the user wants to do.
+
+### Intents
+
+Different **intents** are created to handle different types of conversations.
+
+Examples include:
+
+```text
+Currency Conversion
+Greeting
+Help
+Thank You
+Well Done
+Who Are You
+Who Made You
+Who Is Your Boss
+Are You Smarter
+Are You Beautiful
+Goodbye
+Fallback
+```
+
+Each intent contains training phrases that help Dialogflow recognize different ways users may express the same request.
+
+For example:
+
+```text
+Convert 100 USD to NPR
+100 dollars in Nepali rupees
+How much is 100 USD in NPR?
+Convert 100 American dollars into NPR
+```
+
+These different phrases can be mapped to the currency conversion intent.
 
 ---
