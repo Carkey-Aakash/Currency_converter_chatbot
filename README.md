@@ -195,3 +195,58 @@ User
 The Flask application receives the request from Dialogflow, extracts the currency information, sends the conversion request to ExchangeRate-API, and returns the result to Dialogflow.
 
 ---
+
+# ⚙️ Backend – Flask
+
+Python **Flask** is used to create the webhook server.
+
+The Flask application:
+
+1. Receives the request from Dialogflow.
+2. Extracts the source currency.
+3. Extracts the amount.
+4. Extracts the target currency.
+5. Sends the request to ExchangeRate-API.
+6. Receives the converted amount.
+7. Creates a response.
+8. Sends the response back to Dialogflow.
+
+Example:
+
+```text
+Input:
+Convert 100 USD to NPR
+
+Extracted:
+Source = USD
+Amount = 100
+Target = NPR
+
+API Result:
+Converted amount
+
+Chatbot Response:
+100.0 USD is 15291.61 NPR
+```
+
+---
+
+# 🌐 ExchangeRate-API Integration
+
+The chatbot uses **ExchangeRate-API** to obtain currency conversion results.
+
+Instead of manually maintaining exchange rates, the Flask backend sends the source currency, target currency, and amount to the API.
+
+Example API request concept:
+
+```text
+Source Currency → USD
+Target Currency → NPR
+Amount → 100
+```
+
+The API returns the conversion result, which is then sent back to the user through Dialogflow.
+
+---
+
+
