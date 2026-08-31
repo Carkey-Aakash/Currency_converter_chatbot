@@ -114,3 +114,84 @@ Convert 100 American dollars into NPR
 These different phrases can be mapped to the currency conversion intent.
 
 ---
+
+# 🏷️ Dialogflow Entities
+
+Entities are used to extract important information from the user's message.
+
+For currency conversion, the chatbot uses entities for information such as:
+
+### Amount & Source Currency
+
+The chatbot extracts the amount and source currency from the user's request.
+
+Example:
+
+```text
+Convert 100 USD to NPR
+```
+
+Dialogflow extracts:
+
+```text
+Amount: 100
+Source Currency: USD
+Target Currency: NPR
+```
+
+### Currency Entity
+
+Currency names and their synonyms can be configured so that users can use different expressions.
+
+For example:
+
+```text
+NPR
+Nepali rupee
+Nepalese rupee
+Nepali rupees
+Nepalese rupees
+```
+
+Similarly, currencies such as USD, INR, EUR, CAD, AUD and others can be recognized using their common names and synonyms.
+
+---
+
+# 🔗 Dialogflow Fulfillment & Flask Webhook
+
+For currency conversion, Dialogflow sends the extracted information to a **Flask webhook**.
+
+The overall flow is:
+
+```text
+User
+  │
+  ▼
+Dialogflow
+  │
+  ├── Detect Intent
+  │
+  ├── Extract Entities
+  │
+  ▼
+Flask Webhook
+  │
+  ▼
+ExchangeRate-API
+  │
+  ▼
+Converted Amount
+  │
+  ▼
+Flask Response
+  │
+  ▼
+Dialogflow
+  │
+  ▼
+User
+```
+
+The Flask application receives the request from Dialogflow, extracts the currency information, sends the conversion request to ExchangeRate-API, and returns the result to Dialogflow.
+
+---
