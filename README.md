@@ -301,101 +301,100 @@ This allows Dialogflow to communicate with the locally running Flask webhook dur
 ---
 # 🏗️ Complete Architecture
 
-```text
 
-&#x20;                        ┌──────────────────┐
 
-&#x20;                        │       User       │
+                        ┌──────────────────┐
 
-&#x20;                        └────────┬─────────┘
+                        │       User       │
 
-&#x20;                                 │
+                        └────────┬─────────┘
 
-&#x20;                        Natural Language
+                                 │
 
-&#x20;                                 │
+                        Natural Language
 
-&#x20;                   ┌─────────────▼─────────────┐
+                                 │
 
-&#x20;                   │         Dialogflow        │
+                   ┌─────────────▼─────────────┐
 
-&#x20;                   │                           │
+                   │         Dialogflow        │
 
-&#x20;                   │  Intent Detection         │
+                   │                           │
+ 
+                   │  Intent Detection         │
 
-&#x20;                   │  Entity Extraction        │
+                   │  Entity Extraction        │
 
-&#x20;                   │  Training Phrases         │
+                   │  Training Phrases         │
 
-&#x20;                   └─────────────┬─────────────┘
+                   └─────────────┬─────────────┘
 
-&#x20;                                 │
+                                 │
 
-&#x20;                          Webhook Request
+                          Webhook Request
 
-&#x20;                                 │
+                                 │
 
-&#x20;                   ┌─────────────▼─────────────┐
+                   ┌─────────────▼─────────────┐
 
-&#x20;                   │       Flask Backend       │
+                   │       Flask Backend       │
 
-&#x20;                   │                           │
+                   │                           │
 
-&#x20;                   │  Extract Parameters       │
+                   │  Extract Parameters       │
 
-&#x20;                   │  Process Request          │
+                   │  Process Request          │
 
-&#x20;                   │  Generate Response        │
+                   │  Generate Response        │
 
-&#x20;                   └─────────────┬─────────────┘
+                   └─────────────┬─────────────┘
 
-&#x20;                                 │
+                                 │
 
-&#x20;                          API Request
+                          API Request
 
-&#x20;                                 │
+                                 │
 
-&#x20;                   ┌─────────────▼─────────────┐
+                   ┌─────────────▼─────────────┐
 
-&#x20;                   │     ExchangeRate-API      │
+                   │     ExchangeRate-API      │
 
-&#x20;                   │                           │
+                   │                           │
 
-&#x20;                   │   Currency Conversion     │
+                   │   Currency Conversion     │
 
-&#x20;                   └─────────────┬─────────────┘
+                   └─────────────┬─────────────┘
 
-&#x20;                                 │
+                                 │
 
-&#x20;                        Conversion Result
+                        Conversion Result
 
-&#x20;                                 │
+                                 │
 
-&#x20;                   ┌─────────────▼─────────────┐
+                   ┌─────────────▼─────────────┐
 
-&#x20;                   │       Flask Backend       │
+                   │       Flask Backend       │
 
-&#x20;                   └─────────────┬─────────────┘
+                   └─────────────┬─────────────┘
 
-&#x20;                                 │
+                                 │
 
-&#x20;                             Response
+                             Response
 
-&#x20;                                 │
+                                 │
 
-&#x20;                   ┌─────────────▼─────────────┐
+                   ┌─────────────▼─────────────┐
 
-&#x20;                   │         Dialogflow        │
+                   │         Dialogflow        │
 
-&#x20;                   └─────────────┬─────────────┘
+                   └─────────────┬─────────────┘
 
-&#x20;                                 │
+                                 │
 
-&#x20;                                 ▼
+                                 ▼
 
-&#x20;                               User
+                                User
 
-```
 
 ---
 
