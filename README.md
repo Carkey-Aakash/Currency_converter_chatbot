@@ -299,5 +299,104 @@ ExchangeRate-API
 This allows Dialogflow to communicate with the locally running Flask webhook during development and testing.
 
 ---
+# 🏗️ Complete Architecture
+
+```text
+
+&#x20;                        ┌──────────────────┐
+
+&#x20;                        │       User       │
+
+&#x20;                        └────────┬─────────┘
+
+&#x20;                                 │
+
+&#x20;                        Natural Language
+
+&#x20;                                 │
+
+&#x20;                   ┌─────────────▼─────────────┐
+
+&#x20;                   │         Dialogflow        │
+
+&#x20;                   │                           │
+
+&#x20;                   │  Intent Detection         │
+
+&#x20;                   │  Entity Extraction        │
+
+&#x20;                   │  Training Phrases         │
+
+&#x20;                   └─────────────┬─────────────┘
+
+&#x20;                                 │
+
+&#x20;                          Webhook Request
+
+&#x20;                                 │
+
+&#x20;                   ┌─────────────▼─────────────┐
+
+&#x20;                   │       Flask Backend       │
+
+&#x20;                   │                           │
+
+&#x20;                   │  Extract Parameters       │
+
+&#x20;                   │  Process Request          │
+
+&#x20;                   │  Generate Response        │
+
+&#x20;                   └─────────────┬─────────────┘
+
+&#x20;                                 │
+
+&#x20;                          API Request
+
+&#x20;                                 │
+
+&#x20;                   ┌─────────────▼─────────────┐
+
+&#x20;                   │     ExchangeRate-API      │
+
+&#x20;                   │                           │
+
+&#x20;                   │   Currency Conversion     │
+
+&#x20;                   └─────────────┬─────────────┘
+
+&#x20;                                 │
+
+&#x20;                        Conversion Result
+
+&#x20;                                 │
+
+&#x20;                   ┌─────────────▼─────────────┐
+
+&#x20;                   │       Flask Backend       │
+
+&#x20;                   └─────────────┬─────────────┘
+
+&#x20;                                 │
+
+&#x20;                             Response
+
+&#x20;                                 │
+
+&#x20;                   ┌─────────────▼─────────────┐
+
+&#x20;                   │         Dialogflow        │
+
+&#x20;                   └─────────────┬─────────────┘
+
+&#x20;                                 │
+
+&#x20;                                 ▼
+
+&#x20;                               User
+
+```
+
+---
 
 
