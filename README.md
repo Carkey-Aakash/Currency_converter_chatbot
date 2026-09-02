@@ -398,4 +398,17 @@ This allows Dialogflow to communicate with the locally running Flask webhook dur
 
 ---
 
+# 🛠️ Technologies Used
+
+| Technology           | Purpose                                     |
+| -------------------- | ------------------------------------------- |
+| **Python**           | Backend programming                         |
+| **Flask**            | Webhook and backend server                  |
+| **Dialogflow**       | NLP, intent detection and entity extraction |
+| **ExchangeRate-API** | Currency conversion                         |
+| **Telegram**         | Messaging platform integration              |
+| **ngrok**            | Public tunnel for local webhook             |
+| **Git & GitHub**     | Version control and project hosting         |
+
+---
 
