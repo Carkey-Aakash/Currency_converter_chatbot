@@ -412,3 +412,20 @@ This allows Dialogflow to communicate with the locally running Flask webhook dur
 
 ---
 
+# 📂 Project Structure
+
+```text
+
+currency-converter-chatbot/
+
+│
+
+├── app.py
+
+├── requirements.txt
+
+├── .gitignore
+
+├── README.md
+
+```
