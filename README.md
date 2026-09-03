@@ -438,7 +438,7 @@ Example:
 
 ```text
 
-EXCHANGE\\\\\\\_RATE\\\\\\\_API\\\\\\\_KEY=your\\\\\\\_api\\\\\\\_key\\\\\\\_here
+EXCHANGE_RATE_API_KEY=your_api_key_here
 
 ```
 
