@@ -447,3 +447,86 @@ The `.env` file is excluded from Git using `.gitignore`.
 ---
 
 
+# Installation
+
+### 1. Clone the repository
+
+```bash
+git clone https://github.com/your-username/currency-converter-chatbot.git
+```
+
+### 2. Open the project directory
+
+```bash
+cd currency-converter-chatbot
+```
+
+### 3. Create a virtual environment
+
+```bash
+python -m venv venv
+```
+
+### 4. Activate the virtual environment
+
+**Windows:**
+
+```bash
+venv\Scripts\activate
+```
+
+### 5. Install dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+### 6. Create `.env`
+
+Create a `.env` file in the project root:
+
+```text
+EXCHANGE_RATE_API_KEY=your_api_key_here
+```
+
+### 7. Run Flask
+
+```bash
+python app.py
+```
+
+The Flask server will run locally, typically on:
+
+```text
+http://127.0.0.1:5000
+```
+
+### 8. Start ngrok
+
+In another terminal:
+
+```bash
+ngrok http 5000
+```
+
+Use the generated public URL when configuring the Dialogflow webhook.
+
+---
+
+# 📋 Requirements
+
+The project uses the following Python packages:
+
+```text
+Flask
+requests
+python-dotenv
+```
+
+Install them using:
+
+```bash
+pip install -r requirements.txt
+```
+
+---
