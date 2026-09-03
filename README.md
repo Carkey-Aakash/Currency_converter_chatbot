@@ -429,3 +429,21 @@ currency-converter-chatbot/
 ├── README.md
 
 ```
+
+#  Environment Variables
+
+The API key is stored securely in a `.env` file instead of being written directly in the Python source code.
+
+Example:
+
+```text
+
+EXCHANGE\\\\\\\_RATE\\\\\\\_API\\\\\\\_KEY=your\\\\\\\_api\\\\\\\_key\\\\\\\_here
+
+```
+
+The `.env` file is excluded from Git using `.gitignore`.
+
+---
+
+
