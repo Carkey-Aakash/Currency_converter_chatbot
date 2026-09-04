@@ -537,39 +537,21 @@ pip install -r requirements.txt
 
 User: Hi
 
-
-
 Bot: Hello! 👋 How can I help you?
-
-
 
 User: Convert 100 USD to NPR
 
-
-
 Bot: 100.0 USD is 15291.61 NPR
-
-
 
 User: Who are you?
 
-
-
 Bot: I'm a chatbot designed to help with currency conversions and exchange rates.
-
-
 
 User: Who made you?
 
-
-
 Bot: I was created as a chatbot project using Dialogflow, Flask and ExchangeRate-API.
 
-
-
 User: Thank you
-
-
 
 Bot: You're welcome! 😊
 
