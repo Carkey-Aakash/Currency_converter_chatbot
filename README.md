@@ -558,4 +558,23 @@ Bot: You're welcome! 😊
 ```
 
 ---
+# 🎯 Project Objective
+
+The main objective of this project is to build a conversational application that combines **NLP, backend development, API integration, and messaging-platform integration**.
+
+Rather than creating only a basic currency conversion program, this project demonstrates how a chatbot can:
+
+* Understand natural language
+* Identify user intent
+* Extract relevant entities
+* Communicate with a backend webhook
+* Consume an external REST API
+* Process real-time conversion requests
+* Generate conversational responses
+* Integrate with a messaging platform
+
+---
+
+
+
 
